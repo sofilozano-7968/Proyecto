@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escuela de Fútbol Pinze</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    /* Menú lateral */
+    .menu {
+      width: 250px;
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00bfff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+    }
+
+    .menu h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      border-bottom: 1px solid #0074D9;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .menu ul {
+      list-style: none;
+    }
+
+    .menu ul li {
+      margin: 15px 0;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .menu ul li a:hover {
+      color: #00bfff;
+    }
+
+    .cerrar-sesion {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #960707;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Contenido */
+    .contenido {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #0f5897;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 30px;
+      background-color: white;
+    }
+
+    main h2 {
+      margin-bottom: 15px;
+      color: #001f3f;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .tarjeta {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta:hover img {
+      transform: scale(1.05);
+    }
+
+    .tarjeta .info {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta:hover .info {
+      transform: translateY(0);
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+        .bienvenida {
+      background: #ebf5ff;
+      padding: 25px 30px;
+      border-left: 8px solid #0a4f8b;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .bienvenida h2 {
+      color: #001f3f;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .bienvenida p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="menu">
+    <a href="pagina original.html" class="logo">
+      <img src="imagenes/logo.jpg">
+    </a>
+
+    <h2>⚽ Menú ⚽</h2>
+    <ul>
+  
+      <li><a href="#">Usuarios</a></li>
+      <li><a href="#">Entrenamiento</a></li>
+      <li><a href="#">Inventario</a></li>
+      <li><a href="#">Rendimiento</a></li>
+      <li><a href="#">Matrícula</a></li>
+      <li><a href="#">Pago</a></li>
+     
+    </ul>
+    <button class="cerrar-sesion">Cerrar sesión</button>
+  </aside>
+
+  <div class="contenido">
+    <header>
+      <h1>Escuela de Fútbol Pinze</h1>
+    </header>
+
+        <main>
+      <div class="bienvenida">
+        <h2>Bienvenidos a la escuela de fútbol Pinze</h2>
+        <p>Explora el mundo del equipo más grande de Bogotá. Aquí encontrarás noticias, estadísticas, plantel oficial, partidos recientes y mucho más.</p>
+      </div>
+
+      <div class="galeria">
+        <div class="tarjeta">
+          <img src="imagen1.jpg" alt="Imagen 1">
+          <div class="info">Porque el deporte nos representa</div>
+        </div>
+        <div class="tarjeta">
+          <img src="imagen2.jpg" alt="Imagen 2">
+          <div class="info">Dale</div>
+        </div>
+        <div class="tarjeta">
+          <img src="imagen3.jpg" alt="Imagen 3">
+          <div class="info">Dale</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Todos los derechos reservados &copy; 2025 Escuela de Fútbol Pinze
+    </footer>
+  </div>
+</body>
+</html>
