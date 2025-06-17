@@ -27,6 +27,8 @@
       padding: 20px;
       flex-shrink: 0;
       position: relative;
+      border-left: 8px solid  #0a4f8b;
+      
     }
 
     /* Logo */
@@ -106,6 +108,7 @@
       padding: 25px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+       ;
     }
 
     main {
@@ -163,18 +166,20 @@
     }
 
     footer {
-      background-color: #f5e6bf;
+      background-color: #e9e9fb;
       color: #111;
       text-align: center;
       padding: 15px;
       font-size: 14px;
       font-family: 'Segoe UI', sans-serif;
+      
     }
 
         .bienvenida {
-      background: #f5e6bf;
+      background: #e9e9fb;
       padding: 25px 30px;
       border-left: 8px solid #0a4f8b;
+      border-right: 8px solid #0a4f8b ;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin-bottom: 40px;
@@ -184,12 +189,33 @@
       color: #001f3f;
       margin-bottom: 10px;
       font-size: 24px;
+      text-align: center;
     }
 
     .bienvenida p {
       color: #333;
       font-size: 16px;
       line-height: 1.5;
+      text-align: center;
+    }
+
+        .barrita {
+      background: #001f3f;
+      padding: 25px 30px;
+      border-left: 8px solid  #0a4f8b;
+      border-right: 8px solid  #0a4f8b;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      
+;
+    }
+
+    .barrita h2 {
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-align: center;
     }
 
   </style>
@@ -211,7 +237,9 @@
       <li><a href="#">Pago</a></li>
      
     </ul>
+    <a href="inicio_sesion.html" class="">
     <button class="cerrar-sesion">Cerrar sesión</button>
+    </a>
   </aside>
 
   <div class="contenido">
@@ -224,18 +252,21 @@
         <h2>Bienvenidos a la escuela de fútbol Pinze</h2>
         <p>Explora el mundo del equipo más grande de Bogotá. Aquí encontrarás noticias, estadísticas, plantel oficial, partidos recientes y mucho más.</p>
       </div>
+      <div class="barrita">
+        <h2>GALERIA</h2>
+      </div>
 
       <div class="galeria">
         <div class="tarjeta">
-          <img src="imagen1.jpg" alt="Imagen 1">
+          <img src="./imagenes/fut1.avif" alt="Imagen 1">
           <div class="info">Porque el deporte nos representa</div>
         </div>
         <div class="tarjeta">
-          <img src="imagen2.jpg" alt="Imagen 2">
+          <img src="./imagenes/fut2.jpg" alt="Imagen 2">
           <div class="info">Dale</div>
         </div>
         <div class="tarjeta">
-          <img src="imagen3.jpg" alt="Imagen 3">
+          <img src="./imagenes/fut3.jpg" alt="Imagen 3">
           <div class="info">Dale</div>
         </div>
       </div>

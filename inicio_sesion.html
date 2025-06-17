@@ -6,136 +6,161 @@
   <title>Inicio de sesión - Escuela de Fútbol Pinze</title>
   <style>
     /* Reset y tipografía */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #001f3f;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f0f0;
-      color: #111;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-    /* Logo fijo en esquina superior izquierda */
-    .logo {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #00bfff;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background-color: white;
-      z-index: 1000;
-    }
+/* Logo fijo */
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #00bfff;
+  cursor: pointer;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
 
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .logo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
-    }
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
 
-    /* Caja del login */
-    .login-box {
-      background-color: white;
-      width: 350px;
-      padding: 40px 25px 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+/* Caja login */
+.login-box {
+  background-color: white;
+  width: 350px;
+  padding: 40px 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border-left: 8px solid #0a4f8b;
+  border-right: 8px solid #0a4f8b ;
+}
 
-    /* Título centrado */
-    .login-box h1 {
-      font-size: 24px;
-      margin-bottom: 40px;
-      color: #001f3f;
-      font-weight: 700;
-    }
+.login-box h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #001f3f;
+  font-weight: 700;
+}
 
-    /* Formulario */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-    input[type="email"],
-    input[type="password"] {
-      padding: 12px 15px;
-      font-size: 16px;
-      border: 1.5px solid #001f3f;
-      border-radius: 6px;
-      color: #111;
-      font-family: 'Segoe UI', sans-serif;
-      transition: border-color 0.3s ease;
-    }
+label {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
-    input[type="email"]:focus,
-    input[type="password"]:focus {
-      border-color: #00bfff;
-      outline: none;
-    }
+input[type="email"],
+input[type="password"] {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1.5px solid #001f3f;
+  border-radius: 6px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 400;
+  transition: border-color 0.3s ease;
+}
 
-    /* Botón */
-    button {
-      background-color: #001f3f;
-      color: white;
-      padding: 14px;
-      font-size: 16px;
-      font-weight: 700;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #00bfff;
+  outline: none;
+}
 
-    button:hover {
-      background-color: #0074d9;
-    }
+/* Placeholder */
+input::placeholder {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  color: #888;
+  font-size: 14px;
+}
 
-    /* Enlaces extras */
-    .extra-links {
-      margin-top: 25px;
-      font-size: 14px;
-      color: #001f3f;
-    }
+/* Botón */
+button {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 50%;
+  transition: background-color 0.3s ease;
+}
 
-    .extra-links a {
-      color: #001f3f;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-    }
+button:hover {
+  background-color: #0074d9;
+}
 
-    .extra-links a:hover {
-      color: #00bfff;
-      text-decoration: underline;
-    }
+/* Enlaces */
+.extra-links {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #001f3f;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.extra-links a {
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #00bfff;
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
 
-  <a href="pagina original.html" class="logo" aria-label="Logo Escuela de Fútbol Pinze">
+  <a href="" class="logo" aria-label="Logo Escuela de Fútbol Pinze">
     <img src="imagenes/logo.jpg" alt="Logo Escuela de Fútbol Pinze" />
   </a>
 
@@ -143,27 +168,21 @@
     <h1>Escuela de Fútbol Pinze</h1>
 
     <form>
-      <input
-        type="email"
-        name="correo"
-        placeholder="Correo electrónico"
-        autocomplete="username"
-        required
-        aria-label="Correo electrónico"
-      />
-      <input
-        type="password"
-        name="contrasena"
-        placeholder="Contraseña"
-        autocomplete="current-password"
-        required
-        aria-label="Contraseña"
-      />
-      <button type="submit">Ingresar al sistema</button>
+      <div class="Formgrupo">
+          <label for="Validación">Correo</label>
+           <input type="email" class="" placeholder="Ingrese su correo"  name="txt" required  >   
+      </div>
+    
+      <div class="Formgrupo">
+          <label for="Validación">Contraseña</label>
+           <input type="password" class="" placeholder="Ingrese su Contraseña"  name="txt_" required  >   
+      </div>
+      
+      <button type="submit">Ingresar </button>
     </form>
 
     <div class="extra-links">
-      <a href="#">¿Olvidaste tu contraseña?</a> |
+      <a href="#">¿Olvidaste tu contraseña?</a> 
       <a href="#">Registrarse</a>
     </div>
   </div>
