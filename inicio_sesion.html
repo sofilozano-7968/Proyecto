@@ -52,19 +52,19 @@ body {
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
 }
 
-/* Caja login */
+
 .login-box {
-  background-color: white;
-  width: 350px;
-  padding: 40px 25px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  border-left: 8px solid #0a4f8b;
-  border-right: 8px solid #0a4f8b ;
-}
+      background-color: white;
+      max-width: 400px;
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 4px solid #0a4f8b; 
+      margin-top: auto;
+      margin-bottom: auto;
+    }
 
 .login-box h1 {
   font-size: 24px;
@@ -89,7 +89,7 @@ label {
   text-align: center;
 }
 
-input[type="email"],
+input[type="number"],
 input[type="password"] {
   padding: 10px 14px;
   font-size: 15px;
@@ -101,7 +101,7 @@ input[type="password"] {
   transition: border-color 0.3s ease;
 }
 
-input[type="email"]:focus,
+input[type="number"]:focus,
 input[type="password"]:focus {
   border-color: #00bfff;
   outline: none;
@@ -169,8 +169,8 @@ button:hover {
 
     <form>
       <div class="Formgrupo">
-          <label for="Validación">Correo</label>
-           <input type="email" class="" placeholder="Ingrese su correo"  name="txt" required  >   
+          <label for="Validación">Documento</label>
+           <input type="number" class="" placeholder="Ingrese su documento"  name="txt" required  >   
       </div>
     
       <div class="Formgrupo">
@@ -178,12 +178,12 @@ button:hover {
            <input type="password" class="" placeholder="Ingrese su Contraseña"  name="txt_" required  >   
       </div>
       
-      <button type="submit">Ingresar </button>
+      <button type="submit">Iniciar sesión </button>
     </form>
 
     <div class="extra-links">
       <a href="#">¿Olvidaste tu contraseña?</a> 
-      <a href="#">Registrarse</a>
+      <a href="registrarse.html">Registrarse</a>
     </div>
   </div>
 
