@@ -20,33 +20,66 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 60px 20px;
+      padding: 90px 20px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #0b1649;
+      border-bottom: 3px solid #00bfff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      gap: 15px;
     }
 
     .logo {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      width: 120px;
-      height: 120px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       overflow: hidden;
-      border: 5px solid #00bfff;
+      border: 3px solid #00bfff;
       cursor: pointer;
-      background-color: white;
+      flex-shrink: 0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 1000;
     }
 
     .logo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .logo:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+      box-shadow: 0 0 10px rgba(0,191,255,0.6);
+    }
+
+    .volver {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+
+    .volver:hover,
+    .volver:focus {
+      color: #00bfff;
+      outline: none;
+      text-decoration: underline;
     }
 
     .login-box {
@@ -134,9 +167,12 @@
 </head>
 <body>
 
-  <a href="pagina original.html" class="logo" aria-label="Logo Escuela de Fútbol Pinze">
-    <img src="imagenes/logo.jpg" alt="Logo Escuela de Fútbol Pinze" />
-  </a>
+  <header>
+    <a href="pagina original.html" class="logo" aria-label="Logo Escuela de Fútbol Pinze">
+      <img src="imagenes/logo.jpg" alt="Logo Escuela de Fútbol Pinze" />
+    </a>
+    <a href="pagina original.html" class="volver">Volver</a>
+  </header>
 
   <div class="login-box" role="main" aria-label="Formulario de registro de inventario">
     <h1>Inventario</h1>
