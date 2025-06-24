@@ -20,7 +20,7 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 90px 20px 20px; /* espacio para header */
+      padding: 90px 20px 20px;
       flex-direction: column;
       align-items: center;
     }
@@ -65,7 +65,6 @@
     }
 
     .volver {
-      font-family: 'Segoe UI', sans-serif;
       font-size: 20px;
       font-weight: 600;
       color: #ffffff;
@@ -84,13 +83,13 @@
 
     .login-box {
       background-color: white;
-      max-width: 500px;
+      max-width: 900px;
       width: 100%;
       padding: 40px 30px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
-      border: 4px solid #0a4f8b; 
+      border: 4px solid #0a4f8b;
       margin: 0 auto 40px;
     }
 
@@ -103,11 +102,13 @@
 
     form {
       display: flex;
-      flex-direction: column;
-      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .Formgrupo {
+      flex: 0 1 calc(50% - 10px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -182,6 +183,16 @@
     .extra-links a:hover {
       color: #00bfff;
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .Formgrupo {
+        flex: 0 1 100%;
+      }
+
+      .login-box {
+        padding: 30px 15px;
+      }
     }
   </style>
 </head>
@@ -303,7 +314,6 @@
       <a href="inicio_sesion.html">Iniciar sesión</a>
     </div>
   </div>
-  
 
 </body>
 </html>
