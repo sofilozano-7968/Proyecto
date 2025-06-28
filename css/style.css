@@ -89,7 +89,7 @@ nav a.iniciar-sesion:focus-visible {
 
 /* Hero */
 .hero {
-  background-color: #cce7ff;
+  background-color: #266aa5;
   padding: 60px 30px 50px;
   border-radius: 12px;
   box-shadow: 0 20px 25px rgba(38, 24, 170, 0.2);
@@ -101,14 +101,14 @@ nav a.iniciar-sesion:focus-visible {
 .hero h1 {
   font-size: 40px;
   margin-bottom: 15px;
-  color: #001f3f;
+  color: #fbfdff;
 }
 
 .hero p {
   max-width: 700px;
   margin: 15px auto 30px;
   font-size: 1.2rem;
-  color: #004080;
+  color: #e7f1fc;
 }
 
 .hero-gallery {
